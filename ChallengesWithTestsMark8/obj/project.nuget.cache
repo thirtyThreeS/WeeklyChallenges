@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "5gxZcuDIHu8Lp/JnmnNZeE3ZxeLvvRm6N9eU+Z+5RveaExIWJ/s9Nuy6vmjImgPLJC4DQ7Cqkfara6MtZgvoBw==",
+  "dgSpecHash": "X0Jvow56i6i58QVj0bwzzF9iGVta3Q7ybEz7Xt8nD22VVkP5BsiMPI+TRtKrF9iaUIC99YVzNuX0qJfBSvAg1g==",
   "success": true,
-  "projectFilePath": "/Users/michaeldoyle/repos/mark18/repos/WeeklyChallenges/ChallengesWithTestsMark8/ChallengesWithTestsMark8.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\thaum\\repos\\WeeklyChallenges\\ChallengesWithTestsMark8\\ChallengesWithTestsMark8.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\thaum\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.21\\microsoft.netcore.app.host.win-x64.3.1.21.nupkg.sha512",
+    "C:\\Users\\thaum\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\thaum\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\thaum\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+  ],
   "logs": []
 }
