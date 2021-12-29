@@ -66,56 +66,56 @@ namespace ChallengesWithTestsMark8
 
         public int IndexOfLastUniqueLetter(string str)
         {
-            
-            var dict = new Dictionary<char, int>();
-            
-            for (int i = str.Length - 1; i > 0; i--)
-            {
-                char c = str[i];
 
-                if (char.IsLetter(c))
-                {
-                    if (dict.ContainsKey(c))
-                    {
-                        dict[c]++;
-                    }
-                    else
-                    {
-                        dict.Add(c, 1);
-                    }
-                }
-            }
+            //var dict = new Dictionary<char, int>();
 
-            var pair = dict.FirstOrDefault(x => x.Value == 1);
-
-            return ;
-            
-            
-            
-            
-            
-            //int indexOf = -1;
-            //bool uniqueIndex;
-
-            
-            //for (int i = 0; i < str.Length; i++)
+            //for (int i = str.Length - 1; i > 0; i--)
             //{
-            //    uniqueIndex = true;
+            //    char c = str[i];
 
-            //    for (int j = 0; j < str.Length; j++)
+            //    if (char.IsLetter(c))
             //    {
-            //        if ((str[i] == str[j]) && i != j)
+            //        if (dict.ContainsKey(c))
             //        {
-            //            uniqueIndex = false;
+            //            dict[c]++;
+            //        }
+            //        else
+            //        {
+            //            dict.Add(c, 1);
             //        }
             //    }
-
-            //    if (uniqueIndex == true)
-            //    {
-            //        return i;
-            //    }
             //}
-            //return indexOf;
+
+            //var pair = dict.FirstOrDefault(x => x.Value == 1);
+
+            //return ;
+
+
+
+
+
+            int indexOf = -1;
+            bool uniqueIndex;
+
+
+            for (int i = 0; i < str.Length; i++)
+            {
+                uniqueIndex = true;
+
+                for (int j = 0; j < str.Length; j++)
+                {
+                    if ((str[i] == str[j]) && i != j)
+                    {
+                        uniqueIndex = false;
+                    }
+                }
+
+                if (uniqueIndex == true)
+                {
+                    return i;
+                }
+            }
+            return indexOf;
         }
 
         public int MaxConsecutiveCount(int[] numbers)

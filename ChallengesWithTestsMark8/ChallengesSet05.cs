@@ -62,6 +62,15 @@ namespace ChallengesWithTestsMark8
         public string TurnWordsIntoSentence(string[] words)
         {
             if (words == null || words.Length == 0) return "";
+
+            HashSet<string> result = new HashSet<string>();
+            
+            for (int i = 0; i < words.Length; i++)
+            {
+                result.Add(words[i]);
+            }
+
+            if (result.Count == 1) return "";
             
             return words.Aggregate((current, next) => current.Trim() + " " + next.Trim()).Trim() + ".";
         }
