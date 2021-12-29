@@ -103,9 +103,6 @@ namespace ChallengesWithTestsMark8
                 number = number - 1;
             }
             return fact;
-
-            //if (number == 1) return 1;
-            //return number * Factorial(number - 1);
         }
     }
 }

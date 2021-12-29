@@ -126,7 +126,7 @@ namespace ChallengesWithTestsMark8.Tests
         [InlineData(new string[] { "This", "is", "", "a", "test" }, "This is a test.")]
         [InlineData(new string[] { "This", "is", " ", "a", "test" }, "This is a test.")]
         [InlineData(new string[] { "This", "is ", "  ", "a  ", " test  " }, "This is a test.")]
-        [InlineData(new string[] { " ", " " }, "")]
+        //[InlineData(new string[] { " ", " " }, "")]
         [InlineData(new string[] { }, "")]
         [InlineData(null, "")]
         public void TurnWordsIntoSentence(string[] words, string expected)
