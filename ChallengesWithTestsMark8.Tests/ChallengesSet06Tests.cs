@@ -20,7 +20,7 @@ namespace ChallengesWithTestsMark8.Tests
         [InlineData(new string[] { null, "bravo", "charlie" }, "braVo", false, false)]
         [InlineData(new string[] { null, "bravo", "chArlie" }, "charliE", false, false)]
         [InlineData(new string[] { null, null, "charlie" }, "bravo", true, false)]
-        //[InlineData(null, "alpha", true, false)]
+        [InlineData(null, "alpha", true, false)]
         public void CollectionContainsWord(IEnumerable<string> words, string word, bool ignoreCase, bool expected)
         {
             // Arrange
@@ -74,7 +74,7 @@ namespace ChallengesWithTestsMark8.Tests
         [InlineData("aa", -1)]
         [InlineData("a", 0)]
         [InlineData("", -1)]
-        //[InlineData("ab", 1)]
+        [InlineData("ab", 1)]
         [InlineData("abb", 0)]
         [InlineData("aba", 1)]
         [InlineData("aab", 2)]
@@ -83,7 +83,7 @@ namespace ChallengesWithTestsMark8.Tests
         [InlineData("aabcc", 2)]
         [InlineData("aabbcddee", 4)]
         [InlineData("aaabbbcdddeee", 6)]
-        //[InlineData("aaabbbcdddeeeffg", 15)]
+        [InlineData("aaabbbcdddeeeffg", 15)]
         [InlineData("abbbccdddeeeffgg", 0)]
         public void LastUniqueIndex(string str, int expected)
         {

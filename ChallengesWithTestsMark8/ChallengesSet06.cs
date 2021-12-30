@@ -8,34 +8,17 @@ namespace ChallengesWithTestsMark8
     {
         public bool CollectionContainsWord(IEnumerable<string> words, string word, bool ignoreCase)
         {
-            //if string matches string you win, if not, gtfo
-            //if (words == null && !words.Contains(word))
-            //{
-            //    return false;
-            //}
             bool containsWord = false;
 
-            foreach (string word2 in words)
-            {
-                if (word2 == null) return false;
-                if (string.Equals(word, null) || words.Equals(null))
-                {
-                    return false;
-                }
-            }
-
-            //if (words.Contains(null))
-            //{
-            //    return false;
-            //}
-
+            if (string.Equals(words, null) || words.Contains(null)) return false;
+            
             if (ignoreCase == true)
             {
-                    word = word.ToLower();
-                    //res = words.Any(x => x.ToLower() == word.ToLower());
-                    List<string> list = words.Select(x => x.ToLower()).ToList();
+                word = word.ToLower();
 
-                    containsWord = list.Contains(word);
+                List<string> lc = words.Select(x => x.ToLower()).ToList();
+
+                containsWord = lc.Contains(word);
             }
 
             if (ignoreCase == false)
@@ -66,56 +49,27 @@ namespace ChallengesWithTestsMark8
 
         public int IndexOfLastUniqueLetter(string str)
         {
-
-            //var dict = new Dictionary<char, int>();
-
-            //for (int i = str.Length - 1; i > 0; i--)
-            //{
-            //    char c = str[i];
-
-            //    if (char.IsLetter(c))
-            //    {
-            //        if (dict.ContainsKey(c))
-            //        {
-            //            dict[c]++;
-            //        }
-            //        else
-            //        {
-            //            dict.Add(c, 1);
-            //        }
-            //    }
-            //}
-
-            //var pair = dict.FirstOrDefault(x => x.Value == 1);
-
-            //return ;
-
-
-
-
-
-            int indexOf = -1;
-            bool uniqueIndex;
-
+            int index = -1;
+            bool uindex;
 
             for (int i = 0; i < str.Length; i++)
             {
-                uniqueIndex = true;
+                uindex = true;
 
                 for (int j = 0; j < str.Length; j++)
                 {
-                    if ((str[i] == str[j]) && i != j)
+                    if (str[i] == str[j] && i != j)
                     {
-                        uniqueIndex = false;
+                        uindex = false;
                     }
                 }
 
-                if (uniqueIndex == true)
+                if (uindex == true)
                 {
-                    return i;
+                    index = i;
                 }
             }
-            return indexOf;
+            return index;
         }
 
         public int MaxConsecutiveCount(int[] numbers)
@@ -145,7 +99,27 @@ namespace ChallengesWithTestsMark8
 
         public double[] GetEveryNthElement(List<double> elements, int n)
         {
-            throw new NotImplementedException();
+            var newElements = new List<double>();
+            var nullHeaven = new double[0];
+
+            if (elements == null) return nullHeaven;
+
+            for (int i = 0; i < elements.Count; i++)
+            {
+                if (elements[i] % n == 0)
+                {
+                    newElements.Add(elements[i]);
+                }
+
+                if (n < 0 || n > elements.Count)
+                {
+                    newElements.Clear();
+                }
+            }
+            
+            double[] d = newElements.ToArray();
+            
+            return d;
         }
     }
 }
